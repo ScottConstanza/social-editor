@@ -4,6 +4,7 @@
     margin: 0;
     list-style-type: none;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 button{
@@ -39,6 +40,17 @@ button{
         opacity: 1;
         transform: translateX(0px);
     }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
 }
 
 
@@ -197,6 +209,84 @@ button{
 .panel{
     background-color: #2B363C;
     width: 350px;
+    padding: 15px ;
+}
+
+.panel__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #4B5155;
+    padding-bottom: 12px;
+}
+
+.first-heading{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.panel__collapse-icon{
+    color: #6B7276;
+    cursor: pointer;
+}
+
+.panel__images{
+    padding: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    gap: 8px;
+}
+
+.panel__img{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 7px;
+    transition: all 0.2s;
+    cursor: pointer;
+    animation: fade-in 1s;
+}
+
+.panel__img:nth-child(2) {
+    animation: fade-in 1s 0.1s backwards;
+}
+
+.panel__img:nth-child(3) {
+    animation: fade-in 1s 0.2s backwards;
+}
+
+.panel__img:nth-child(4) {
+    animation: fade-in 1s 0.3s backwards;
+}
+
+.panel__img:nth-child(5) {
+    animation: fade-in 1s 0.4s backwards;
+}
+
+.panel__img:hover {
+    transform: scale(1.05);
+
+}
+
+.panel__btn{
+    width: 140px;
+    height: 140px;
+    border-radius: 7px;
+    background-color: #333e44;
+    cursor: pointer;
+    transition: all 0.2s;
+    animation: fade-in 1s 0.5s backwards;
+}
+
+.panel__btn:hover,
+.panel__btn:focus {
+    background-color: #404c52;
+}
+
+.panel__upload-icon{
+    font-size: 25px;
+    color: #21292d;
 }
 
 
@@ -206,3 +296,70 @@ button{
     background-color: #EDF1F3;
     flex: 1;
 }
+
+.info-bar{
+    height: 50px;
+    background-color: #fff;
+    border-bottom: 1px solid #d6dde1;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.breadcrumbs {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+}
+
+.breadcrumbs__link{
+    color: #A6ADB1;
+}
+
+.breadcrumbs__icon{
+    color: #A6ADB1;
+    margin: 0 13px;
+}
+
+.breadcrumbs__name{
+    color: #2e3335;
+    font-weight: 500;
+}
+
+.button{
+    background-color: #375bb6;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 500px;
+    transition: all 0.4s;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #26438d;
+}
+
+.artboard{
+
+}
+
+.canvas{
+
+}
+
+.canvas__bg-img{
+
+}
+
+.canvas__fg-img{
+
+}
+
+.canvas__circle{
+
+}
+
